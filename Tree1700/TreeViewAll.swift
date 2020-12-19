@@ -53,11 +53,12 @@ struct TreeViewAll: View {
 
 
                 if isShow {
-                    SpriteView(scene: logoScene)
+                    ArdaView()
                         .disabled(false)
                 }
-  
+               
                 loadView()
+                    .disabled(true)
 
 
             }

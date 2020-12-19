@@ -82,6 +82,8 @@
 		CCCAF4BE258DF8EE007DB903 /* Png3.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCCAF4BD258DF8EE007DB903 /* Png3.swift */; };
 		CCCAF4C3258DF93C007DB903 /* Png1.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCCAF4C2258DF93C007DB903 /* Png1.swift */; };
 		CCCAF4C9258E363B007DB903 /* SpriteLogo.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCCAF4C8258E363B007DB903 /* SpriteLogo.swift */; };
+		CCCAF4D1258E5258007DB903 /* ArdaScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCCAF4D0258E5258007DB903 /* ArdaScene.swift */; };
+		CCCAF4D6258E5288007DB903 /* Arda.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCCAF4D5258E5288007DB903 /* Arda.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -183,6 +185,8 @@
 		CCCAF4BD258DF8EE007DB903 /* Png3.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Png3.swift; sourceTree = "<group>"; };
 		CCCAF4C2258DF93C007DB903 /* Png1.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Png1.swift; sourceTree = "<group>"; };
 		CCCAF4C8258E363B007DB903 /* SpriteLogo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpriteLogo.swift; sourceTree = "<group>"; };
+		CCCAF4D0258E5258007DB903 /* ArdaScene.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArdaScene.swift; sourceTree = "<group>"; };
+		CCCAF4D5258E5288007DB903 /* Arda.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Arda.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -501,6 +505,8 @@
 			isa = PBXGroup;
 			children = (
 				CCCAF4C8258E363B007DB903 /* SpriteLogo.swift */,
+				CCCAF4D5258E5288007DB903 /* Arda.swift */,
+				CCCAF4D0258E5258007DB903 /* ArdaScene.swift */,
 			);
 			path = Sprite;
 			sourceTree = "<group>";
@@ -684,12 +690,14 @@
 				CCCAF43C258DED0F007DB903 /* Timeline_Png111.swift in Sources */,
 				CCCAF3D8258DEA53007DB903 /* Timeline_Png1.swift in Sources */,
 				CCCAF3EF258DEB07007DB903 /* Png10_View.swift in Sources */,
+				CCCAF4D6258E5288007DB903 /* Arda.swift in Sources */,
 				CCCAF4A5258DF78B007DB903 /* Png12.swift in Sources */,
 				CCCAF3D7258DEA53007DB903 /* Png1_View.swift in Sources */,
 				CCCAF45B258DEDCD007DB903 /* Png107_View.swift in Sources */,
 				CCCAF3DF258DEA95007DB903 /* Png3_View.swift in Sources */,
 				CCCAF454258DEDA5007DB903 /* Png102_View.swift in Sources */,
 				CCCAF3C4258DE9FD007DB903 /* UIView+Extension.swift in Sources */,
+				CCCAF4D1258E5258007DB903 /* ArdaScene.swift in Sources */,
 				CCCAF407258DEBA6007DB903 /* Png4_View.swift in Sources */,
 				CCCAF4BE258DF8EE007DB903 /* Png3.swift in Sources */,
 				CCCAF482258DF525007DB903 /* Png110.swift in Sources */,
