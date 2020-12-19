@@ -81,6 +81,7 @@
 		CCCAF4B9258DF897007DB903 /* Png9.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCCAF4B8258DF897007DB903 /* Png9.swift */; };
 		CCCAF4BE258DF8EE007DB903 /* Png3.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCCAF4BD258DF8EE007DB903 /* Png3.swift */; };
 		CCCAF4C3258DF93C007DB903 /* Png1.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCCAF4C2258DF93C007DB903 /* Png1.swift */; };
+		CCCAF4C9258E363B007DB903 /* SpriteLogo.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCCAF4C8258E363B007DB903 /* SpriteLogo.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -181,6 +182,7 @@
 		CCCAF4B8258DF897007DB903 /* Png9.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Png9.swift; sourceTree = "<group>"; };
 		CCCAF4BD258DF8EE007DB903 /* Png3.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Png3.swift; sourceTree = "<group>"; };
 		CCCAF4C2258DF93C007DB903 /* Png1.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Png1.swift; sourceTree = "<group>"; };
+		CCCAF4C8258E363B007DB903 /* SpriteLogo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpriteLogo.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -234,6 +236,7 @@
 				CCCAF387258DE995007DB903 /* Tree1700App.swift */,
 				CCCAF389258DE995007DB903 /* ContentView.swift */,
 				CCCAF468258DF138007DB903 /* TreeViewAll.swift */,
+				CCCAF4C7258E360F007DB903 /* Sprite */,
 				CCCAF3B5258DE9A6007DB903 /* TreeModelAnimation */,
 				CCCAF38B258DE997007DB903 /* Assets.xcassets */,
 				CCCAF390258DE997007DB903 /* Info.plist */,
@@ -494,6 +497,14 @@
 			path = Png105;
 			sourceTree = "<group>";
 		};
+		CCCAF4C7258E360F007DB903 /* Sprite */ = {
+			isa = PBXGroup;
+			children = (
+				CCCAF4C8258E363B007DB903 /* SpriteLogo.swift */,
+			);
+			path = Sprite;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -660,6 +671,7 @@
 				CCCAF3C7258DE9FD007DB903 /* CAMediaTimingFunction+Extension.swift in Sources */,
 				CCCAF3C6258DE9FD007DB903 /* ShapeView.swift in Sources */,
 				CCCAF478258DF2BD007DB903 /* Png107.swift in Sources */,
+				CCCAF4C9258E363B007DB903 /* SpriteLogo.swift in Sources */,
 				CCCAF410258DEBD4007DB903 /* Png12_View.swift in Sources */,
 				CCCAF418258DEC00007DB903 /* Png101_View.swift in Sources */,
 				CCCAF420258DEC32007DB903 /* Timeline_Png103.swift in Sources */,

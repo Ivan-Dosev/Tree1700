@@ -6,6 +6,7 @@
 //
 
 import SwiftUI
+import SpriteKit
 
 struct TreeViewAll: View {
     
@@ -28,8 +29,18 @@ struct TreeViewAll: View {
         }
     }
     
-    @State var inButton : Int = 0
+    @State var inButton : Int = 1
+    @State var isShow : Bool = false
+    
     var pngSuma = ["png105", "png107", "png102", "png110", "png109", "png111", "png108", "png104", "png103", "png101", "png12", "png4","png19", "png10", "png9", "png3", "png1"]
+    
+    var logoScene : SKScene {
+
+        let scene = LogoScene()
+        scene.scaleMode = .resizeFill
+        scene.backgroundColor = .white
+        return scene
+    }
     
     var body: some View {
         
@@ -38,11 +49,16 @@ struct TreeViewAll: View {
             
             
             ZStack {
-                Image("pngTreva")
-                    .resizable()
-                    
-                    
+                
+
+
+                if isShow {
+                    SpriteView(scene: logoScene)
+                        .disabled(false)
+                }
+  
                 loadView()
+
 
             }
             .frame(width: width / 1.1, height: width / 1.1 , alignment: .center)
@@ -66,6 +82,12 @@ struct TreeViewAll: View {
 
             
         }.padding(.horizontal, 15)
+        
+        Button(action: {
+            self.isShow.toggle()
+        }) {
+            Text("🐱 refresh")
+        }
     }
     
     func loadView() -> AnyView {
