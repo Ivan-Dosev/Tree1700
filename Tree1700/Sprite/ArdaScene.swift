@@ -90,7 +90,7 @@ class MagicScene: SKScene {
     }
     
     override func touchesEnded(_ touches: Set<UITouch>, with event: UIEvent?) {
-        DispatchQueue.main.asyncAfter(deadline: .now() + 1) { [self] in
+        DispatchQueue.main.asyncAfter(deadline: .now() + 0.3) { [self] in
             resetAndPlayDemoAnimation()
         }
        
@@ -141,11 +141,11 @@ class MagicScene: SKScene {
          shatterNode = nil
          animationTimer?.invalidate()
          animationSlider = 0
-         let resolutionX = max(min(resolutionXTextField, 24), 2)
-         let resolutionY = max(min(resolutionYTextField, 24), 2)
+         let resolutionX = max(min(resolutionXTextField, 2), 2)
+         let resolutionY = max(min(resolutionYTextField, 2), 2)
 //         shatterNode = boy.shatter(into: CGSize(width: resolutionX, height: resolutionY), animation: .manual, showHeatmap: true)
         shatterNode = logo.shatter(into: CGSize(width: resolutionX, height: resolutionY), animation: .manual, showHeatmap: true)
-         DispatchQueue.main.asyncAfter(deadline: .now() + 1.0, execute: { [weak self] in
+        DispatchQueue.main.asyncAfter(deadline: .now() + 0.3, execute: { [weak self] in
              self?.runDemoAnimation()
          
          })
@@ -158,7 +158,7 @@ class MagicScene: SKScene {
      
      func runDemoAnimation() {
          animationTimer?.invalidate()
-         animationTimer = Timer.scheduledTimer(withTimeInterval: 1.0 / 60.0, repeats: true, block: { [weak self] timer in
+         animationTimer = Timer.scheduledTimer(withTimeInterval: 1.0 / 20.0, repeats: true, block: { [weak self] timer in
              if let blockSelf = self {
                  if blockSelf.animationSlider < CGFloat(1.0) {
                      blockSelf.animationSlider += CGFloat(0.008)
