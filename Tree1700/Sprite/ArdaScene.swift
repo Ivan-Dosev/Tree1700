@@ -102,9 +102,9 @@ class MagicScene: SKScene {
         logo.position = CGPoint(x: 200, y: 200)
         logo.setScale(0.2)
         addChild(logo)
-        let moveBottomLeft = SKAction.move(to: CGPoint(x: 100, y: 100), duration: 2.0)
+        let moveBottomLeft = SKAction.move(to: CGPoint(x: 100, y: 50), duration: 2.0)
 
-        let moveRight = SKAction.move(to: CGPoint(x: 300, y: 100), duration: 2.0)
+        let moveRight = SKAction.move(to: CGPoint(x: 300, y: 50), duration: 2.0)
 
         let sequence = SKAction.sequence([ moveBottomLeft, .wait(forDuration: 1), .run { [self] in
             logo.xScale = abs(logo.yScale) * 1 } ,moveRight, .wait(forDuration: 1), .run { [self] in
@@ -115,14 +115,7 @@ class MagicScene: SKScene {
         Random.seed()
 
     }
-    
-//    func loadBoy() {
-//        boy.position  = CGPoint(x: 200, y: 200)
-//        boy.zPosition = 1
-//        boy.setScale(0.2)
-//        addChild(boy)
-//        Random.seed()
-//    }
+
     
      func updateAnimation() {
          let progress = CGFloat(animationSlider)

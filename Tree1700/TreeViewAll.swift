@@ -31,16 +31,10 @@ struct TreeViewAll: View {
     
     @State var inButton : Int = 1
     @State var isShow : Bool = false
+    @State var isDead : Bool = false
     
     var pngSuma = ["png105", "png107", "png102", "png110", "png109", "png111", "png108", "png104", "png103", "png101", "png12", "png4","png19", "png10", "png9", "png3", "png1"]
     
-    var logoScene : SKScene {
-
-        let scene = LogoScene()
-        scene.scaleMode = .resizeFill
-        scene.backgroundColor = .white
-        return scene
-    }
     
     var body: some View {
         
@@ -50,15 +44,24 @@ struct TreeViewAll: View {
             
             ZStack {
                 
+            
 
-
-                if isShow {
-                    ArdaView()
-                        .disabled(false)
+                if self.isDead {
+                    
+                    loadDeadScene()
+                    
+                }else{
+                    if isShow {
+                        ArdaView()
+                            .disabled(false)
+                    }
+                   
+                    loadView()
+                        .disabled(true)
                 }
-               
-                loadView()
-                    .disabled(true)
+
+
+
 
 
             }
@@ -84,11 +87,64 @@ struct TreeViewAll: View {
             
         }.padding(.horizontal, 15)
         
-        Button(action: {
-            self.isShow.toggle()
-        }) {
-            Text("🐱 refresh")
+        HStack {
+            Button(action: {
+                self.isShow.toggle()
+            }) {
+                Text("🐱 refresh")
+            }
+            
+            Button(action: {
+                self.isDead.toggle()
+                
+            }) {
+                Text("Game\nOver")
+            }
         }
+        
+
+    }
+    
+    func loadDeadScene() -> AnyView {
+        switch inButton {
+        case 0:
+            return AnyView( SpriteView(scene:DeadPng1()) )
+        case 1:
+            return AnyView( SpriteView(scene:DeadPng3()) )
+        case 2:
+            return AnyView( SpriteView(scene:DeadPng9()) )
+        case 3:
+            return AnyView( SpriteView(scene:DeadPng10()) )
+        case 4:
+            return AnyView( SpriteView(scene:DeadPng19()) )
+        case 5:
+            return AnyView( SpriteView(scene:DeadPng13()) )
+        case 6:
+            return AnyView( SpriteView(scene:DeadPng4()) )
+        case 7:
+            return AnyView( SpriteView(scene:DeadPng12()) )
+        case 8:
+            return AnyView( SpriteView(scene:DeadPng101()) )
+        case 9:
+            return AnyView( SpriteView(scene:DeadPng103()) )
+        case 10:
+            return AnyView( SpriteView(scene:DeadPng104()) )
+        case 11:
+            return AnyView( SpriteView(scene:DeadPng108()) )
+        case 12:
+            return AnyView( SpriteView(scene:DeadPng109()) )
+        case 13:
+            return AnyView( SpriteView(scene:DeadPng111()) )
+        case 14:
+            return AnyView( SpriteView(scene:DeadPng110()) )
+        case 15:
+            return AnyView( SpriteView(scene:DeadPng102()) )
+        case 16:
+            return AnyView( SpriteView(scene:DeadPng107()) )
+        default:
+            return AnyView( SpriteView(scene:DeadPng105()) )
+        }
+       
     }
     
     func loadView() -> AnyView {
