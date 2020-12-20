@@ -18,7 +18,7 @@ class DeadPng108: SKScene {
               emitter.particleTexture = SKTexture(imageNamed: "png108")
               emitter.position = CGPoint(x: frame.midX, y: frame.midY)
               emitter.particleBirthRate = 2
-              emitter.setScale(0.001)
+              emitter.setScale(0.005)
               addChild(emitter)
 
             emitter.run(SKAction.fadeIn(withDuration: 0.5)) {

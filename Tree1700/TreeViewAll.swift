@@ -10,6 +10,8 @@ import SpriteKit
 
 struct TreeViewAll: View {
     
+
+    
     @State var colorShadow : Color = Color(red: 163 / 255, green: 177 / 255, blue: 198 / 255)
     var width : CGFloat {
         let a = UIScreen.main.bounds.width
@@ -49,6 +51,19 @@ struct TreeViewAll: View {
                 if self.isDead {
                     
                     loadDeadScene()
+                        .frame(width: width / 1.2, height: width / 1.2 , alignment: .center)
+                        .background(
+                            ZStack {
+                                Color(red: 224 / 255, green: 229 / 255, blue: 236 / 255)
+                                RoundedRectangle(cornerRadius: 20, style: .continuous)
+                                    .foregroundColor(.white)
+                                    .blur(radius: 4.0)
+                                    .offset(x: -8.0, y: -8.0) })
+                         .foregroundColor(.gray)
+                        .clipShape(RoundedRectangle(cornerRadius: 20, style: .continuous))
+
+                      
+
                     
                 }else{
                     if isShow {
@@ -108,7 +123,7 @@ struct TreeViewAll: View {
     func loadDeadScene() -> AnyView {
         switch inButton {
         case 0:
-            return AnyView( SpriteView(scene:DeadPng1()) )
+            return AnyView( SpriteView(scene: DeadPng1() ) )
         case 1:
             return AnyView( SpriteView(scene:DeadPng3()) )
         case 2:
